@@ -7,38 +7,63 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Article preview component</title>
-
+  <script defer src="script.js"></script>
   
 </head>
 <body>
   <article class="article-preview">
     <img class="article-preview__image" src="./images/drawers.jpg" alt="drawers"/>
-    
-    <div class="article-preview__content">
-      <h2 class="article-preview__title">Shift the overall look and feel by adding these wonderful 
-  touches to furniture in your home</h2>
+    <div class="article-preview__content-wrapper">
+      <div class="article-preview__content">
+        <h2 class="article-preview__title">Shift the overall look and feel by adding these wonderful 
+        touches to furniture in your home</h2>
 
-      
-      <p class="article-preview__description">Ever been in a room and felt like something was missing? Perhaps 
-    it felt slightly bare and uninviting. I’ve got some simple tips 
-    to help you make any room feel complete.</p>
-      
-      <footer class="article-preview__footer">
-        <div class="author-info">
-          <img class="author-info__avatar" src="./images/avatar-michelle.jpg" alt="avatar Michelle" />
-          <div class="author-info__details">
-            <h2 class="author-info__name">Michelle Appleton</h2>
-            <time class="author-info__date">28 Jun 2020</time>            
+        
+        <p class="article-preview__description">Ever been in a room and felt like something was missing? Perhaps 
+        it felt slightly bare and uninviting. I’ve got some simple tips 
+        to help you make any room feel complete.</p>
+        
+        <footer class="article-preview__footer">
+          <div class="author-info">
+            <img class="author-info__avatar" src="./images/avatar-michelle.jpg" alt="avatar Michelle" />
+            <div class="author-info__details">
+              <h2 class="author-info__name">Michelle Appleton</h2>
+              <time class="author-info__date">28 Jun 2020</time>            
+            </div> 
           </div> 
-        </div> 
-        <button class="share-button" aria-label="Share article">
-            <img src="./images/icon-share.svg" alt="Share icon">
-        </button>
-         
+          
+          <!-- Share component -->
+          <div class="share-component">
+            <button class="share-button" id="share-button" aria-label="Share article" aria-expanded="false">
+              <img class="share-button__icon" src="./images/icon-share.svg" alt="">
+            </button>
+          </div>
+        </footer> 
+      </div>
+      
+      <!-- Share panel positioned at bottom of content -->
+      <div class="share-panel" id="share-panel" role="dialog" aria-label="Share options" hidden>
+        <div class="share-panel__wrapper">
+          <span class="share-panel__label">Share</span>
+          <div class="share-panel__links">
+            <a href="#" class="share-link" aria-label="Share on Facebook">
+              <img src="./images/icon-facebook.svg" alt="" class="share-link__icon">
+            </a>
+            <a href="#" class="share-link" aria-label="Share on Twitter">
+              <img src="./images/icon-twitter.svg" alt="" class="share-link__icon">
+            </a>
+            <a href="#" class="share-link" aria-label="Share on Pinterest">
+              <img src="./images/icon-pinterest.svg" alt="" class="share-link__icon">
+            </a>
+          </div>
+          <button class="share-panel__close" id="share-close" aria-label="Close share options">
+            <img src="./images/icon-share.svg" alt="" class="share-panel__close-icon">
+          </button>
+        </div>
         
-        
-      </footer> 
-    </div>  
+      </div>
+    </div>
+    
   </article>
 </body>
 </html>
