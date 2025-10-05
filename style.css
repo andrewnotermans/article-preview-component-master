@@ -211,6 +211,8 @@ body {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+
+
 .share-panel__wrapper {
     width: 267px;
     margin: 0 auto;
@@ -219,7 +221,7 @@ body {
     gap: var(--spacing-200);
 }
 
-.share-panel[hidden] {
+.share-panel.hidden {
     display: none;
 }
 
